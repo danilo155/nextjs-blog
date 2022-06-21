@@ -8,7 +8,9 @@ export default function Home() {
         <meta href='../public/favicon.ico' />
       </Head>
       <main>
-        <h1>Hello World</h1>
+        <div className="container">
+          <h1>Hello World</h1>
+        </div>
       </main>
       <style jsx global>{`
         html,
@@ -22,6 +24,11 @@ export default function Home() {
           margin:0;
           padding:0;
           box-sizing: border-box;
+        }
+        .container{
+          width:1400px;
+          max-width:100%;
+          margin:0 auto;
         }
       `}</style>
     </div>
