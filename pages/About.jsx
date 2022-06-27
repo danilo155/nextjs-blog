@@ -1,14 +1,11 @@
-import Link from "next/dist/client/link"
+import Layout from "../components/Layout"
+
 export default function About() {
     return (
         <>
+            <Layout title='Про меня' />
             <div className="container">
-                <h1>
-                    Welcome to my About
-                </h1>
-                <Link href="/">
-                    <a>Home</a>
-                </Link>
+                
             </div>
         </>
         

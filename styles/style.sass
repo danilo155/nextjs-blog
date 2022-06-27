@@ -1,13 +1,208 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap')
+@font-face
+    font-family: 'Graphik_LCG_Regular'
+    src: url('/fonts/GraphikLCG-Regular.ttf')
+@font-face
+    font-family: 'Graphik_LCG_Bold'
+    src: url('/fonts/GraphikLCG-Bold.ttf')
+
 *
     margin: 0
     padding: 0
     box-sizing: border-box
-    font-family: 'Roboto', sans-serif
-
-.container
-    width: 1400px
-    max-width: 100%
-    margin: 0 auto
-a
+    list-style: none
     text-decoration: none
+    font-family: 'Graphik_LCG_Regular', sans-serif
+.container
+    width: 1168px
+    margin: 0 auto
+    max-width: 100%
+header
+    padding: 23px 0
+    width: 100%
+    .header
+        width: 100%
+        .container
+            display: flex
+            align-items: center
+            justify-content: space-between
+            flex-wrap: wrap
+            .search
+                display: flex
+                input
+                    padding: 16px 0
+                    padding-left: 20px
+                    border: 2px solid #D3E0FF
+                    border-right: 0
+                    border-top-left-radius: 5px
+                    border-bottom-left-radius: 5px
+                    font-family: 'Graphik_LCG_Regular', sans-serif
+                    font-weight: 400
+                    font-size: 18px
+                    line-height: 18px
+                    color: #C2D3FF
+
+                .search-btn
+                    border: none
+                    background: #5C82E4
+                    color: #fff
+                    border-radius: 0px 5px 5px 0px
+                    padding: 16px 19px
+            .contacts-link
+                display: flex
+                h2
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 16px
+                    font-family: 'Graphik_LCG_Regular', sans-serif
+                    color: #969696
+                    margin-bottom: 9px
+                a
+                    color: #5C82E4
+                .tel
+                    border-right: 1px solid #E9E9E9
+                    padding-right: 20px
+                .mail
+                    margin-left: 20px
+                .burger
+                    display: none
+                    background: #FF727A
+                    border-radius: 5px
+                    padding: 10px
+                    width: 50px
+                    margin-left: 158px
+                    position: relative
+                    span
+                        position: absolute
+                        width: 30px
+                        height: 3px
+                        text-align: center
+                        left: 20%
+                        background: #FFFFFF
+                        border-radius: 5px
+                    span::before
+                        content: ''
+                        position: absolute
+                        width: 30px
+                        height: 3px
+                        left: 0%
+                        top: -10px
+                        background: #FFFFFF
+                        border-radius: 5px
+                    span::after
+                        content: ''
+                        position: absolute
+                        width: 30px
+                        height: 3px
+                        left: 0%
+                        top: 10px
+                        background: #FFFFFF
+                        border-radius: 5px
+
+    .nav
+        padding-top: 40px
+        .container
+            width: 860px
+            .nav-list
+                display: flex
+                justify-content: space-between
+                align-items: center
+                flex-wrap: wrap
+            a
+                color: #585858
+                text-align: center
+                transition: .5s
+                position: relative
+                font-weight: 400
+                font-size: 20px
+                line-height: 20px
+                font-family: 'Graphik_LCG_Regular', sans-serif
+
+            a:after
+                content: ''
+                transition: .5s
+                position: absolute
+                width: 0px
+                height: 2px
+                left: 50%
+                bottom: -13px
+                transform: translate(-50%,-50%)
+                display: flex
+                background: #FF727A
+                border-radius: 10px
+            li:hover
+                position: relative
+                a:after
+                    content: ''
+                    display: flex
+                    position: absolute
+                    width: 100%
+                    height: 2px
+                    background: #FF727A
+                    border-radius: 10px
+
+@media screen and ( max-width:807px  )
+    header
+        .header
+            .container
+                justify-content: center
+                .contacts-link
+                    margin-top: 20px
+                    .burger
+                        display: flex
+                        justify-content: center
+                        align-items: center
+
+                .search
+                    margin-left: 10px
+        .nav
+            display: none
+    .container
+        padding: 0 30px
+@media screen and ( max-width:629px  )
+    header
+        background: #FFFFFF
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05)
+        border-radius: 0px 0px 10px 10px
+        .header
+            .container
+                .contacts-link
+                    .burger
+                        position: absolute
+                        margin: 0
+                        height: 30px
+                        top: 15px
+                        left: 10px
+                        padding: 7px 13px
+                    span
+                        position: absolute
+                        width: 18px
+                        height: 16px
+                        text-align: center
+                        left: 20%
+                        background: #FFFFFF
+                        border-radius: 5px
+                    span::before
+                        content: ''
+                        position: absolute
+                        width: 18px
+                        height: 16px
+                        left: 0%
+                        top: -10px
+                        background: #FFFFFF
+                        border-radius: 5px
+                    span::after
+                        content: ''
+                        position: absolute
+                        width: 18px
+                        height: 16px
+                        left: 0%
+                        top: 10px
+                        background: #FFFFFF
+                        border-radius: 5px
+
+                .search
+                    display: none
+                .tel
+                    display: none
+                .mail
+                    display: none
